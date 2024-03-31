@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Far-West Explorer</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="#"><img src="img/logo.png" alt="logo" /></a>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="bloglist.html">Blog_List</a></li>
+          <li><a href="blogdetail.html">Blog_Detail</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+      <nav class="navbar">
+        <div class="cont">
+          <ul class="menu-list">
+            <div class="icon cancel-btn">
+              <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="bloglist.html">Blog_List</a></li>
+            <li><a href="blogdetail.html">Blog_Detail</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="icon menu-btn">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>   
+    <main>
+      <section class="img">
+        <div class="image">
+          <img src="img\kkk.jpg" alt="image" />
+        </div>
+        <div class="content">
+          <h1>Let's Explore Far-West Together</h1>
+          <p>Bring Far-West Near to your Heart</p>
+          <p>Far-West is not that Far</p>
+        </div>
+      </section>
+      <section class="info">
+      <table border="1">
+        <thead >
+          <tr>
+            <td colspan="2" align="centre"> <h3>Places you must checkout</h3></td>
+          </tr>
+          <tr>
+            <th>Tourist Destination</td>
+            <th>Well Known For</td>
+          </tr>
+        </thead>
+        <tbody align="center">
+         <tr>
+          <td>Khaptad National Park</td>
+          <td> Khaptad National Park is known for being home to over 287 species of birds, 23 mammals, 23 amphibian and reptiles.</td>
+        </tr>
+        <tr>
+          <td>Badimalika</td>
+          <td>Badimalika Temple is a revered Hindu pilgrimage site dedicated to Goddess Bhagwati, an incarnation of Goddess Durga.</td>
+        </tr>
+        <tr>
+          <td>Api Saipal</td>
+          <td>The Api Saipal Himal Trek is the best trekking in the western region of Nepal.</td>
+        </tr>
+        <tr>
+          <td>Chisapani Karnali</td>
+          <td>Karnali Bridge Chisapani is the first and only cable-stayed bridge in the country till date</td>
+        </tr>
+        <tr>
+          <td>Surmasarovar</td>
+          <td>Certified holy place of Surma Devi in the world heritage also the second highest lake in Nepal</td>
+        </tr>
+        </tbody>
+      </table>
+    </section> 
+      <section id="places" class="home">
+        <h2 style="color: blueviolet;">Popular Destinations</h2>
+        <div class="home-grid">
+          <div class="home-item">
+            <img src="img/image-khaptad-national-park.jpg" alt="" />
+            <h3>Khaptad National Park</h3>            
+          </div>
+          <div class="home-item">
+            <img src="img/apii.jpeg" alt="" />
+            <h3>Api Saipal</h3>
+          </div>
+          <div class="home-item">
+            <img src="img/surma sarovar.png" alt="" />
+            <h3>Surmasarovar</h3>
+        </div>
+      </section>
+      <div class="video-container">
+        <video width="100%" controls loop>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+   </video>      
+      
+      <p style="color: rgb(92, 28, 28);">Khaptad Clip By Nepal8thwonder</p>
+  </div>
+</main> 
+      <footer>
+        <p>&copy,2024 let's Explore Far-West Together, All right reserved.</p>       
+        <ul>
+          <li>Contact Detail</li>
+            <li>Dhangadhi, Kailali, Nepal</li>
+            <li>E-Mail: <a href="mailto: farwest@gmail.com">farwest@gmail.com</a></li>
+        </ul>
+      </footer>
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = ()=>{
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      }
+      cancelBtn.onclick = ()=>{
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      }
+      window.onscroll = ()=>{
+        this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+      }
+    </script>
+  </body>
+</html>

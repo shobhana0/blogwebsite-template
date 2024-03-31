@@ -1,0 +1,514 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    
+}
+body {
+    background-image: linear-gradient(to right top, #f5fffa, #eafbea, #e9f4d4, #f1eabf, #ffdead);
+}
+/* Define a new font face called "Dongle-light" */
+@font-face {
+     /* Set the font family to "Dongle-light" */
+    font-family: "Dongle-light";
+    /* Specify the source of the font file as a URL */
+    src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-Bold.ttf");
+}
+header{
+
+ background-color: white;
+  display: flex;
+   /* Use display: flex to create a flexible container */
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 25px;
+  font-style: bold;
+  cursor: pointer;
+}
+/*Header Navigationbar*/
+.nav-menu ul{
+    /* Sets display property to flex and removes padding from the right side of the unordered list within .nav-menu */
+    display: flex;
+    padding-right: 0;
+   }
+.nav-menu li{
+       list-style: none;
+       margin-right: 20px;
+       display: inline-block;
+       vertical-align: middle;
+   }
+.nav-menu li:last-child{
+       margin-right: 0;
+   }
+.nav-menu a{
+       text-decoration: underline;
+       font-family: "Dongle-bold",sans-serif;
+       font-size: 1.9rem;
+       color: #333;
+       transition: all ease 0.3s ease, text-decoration 0.3s ease;
+       display: block;
+       text-align: center;
+   }
+.nav-menu a:hover{
+     color:  rgb(54, 190, 224);
+   }
+   
+.logo img{
+    max-width: 15%;
+    background: white;
+    border-radius: 50%
+}
+/*Navigation Bar CSS*/
+.cont{
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 30px;
+  }
+.navbar{
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    padding: 25px 0;
+    transition: all 0.3s ease;
+  }
+.navbar .cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+.navbar .menu-list{
+    display: inline-flex;
+  }
+.menu-list li{
+    list-style: none;
+  }
+.menu-list li a{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+.menu-list li a:hover{
+    color: #007bff;
+  }
+.icon{
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+.menu-list .cancel-btn{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+.icon{
+      display: none
+    }
+.icon.hide{
+      display: none;
+    }
+.navbar .menu-list{
+      position: fixed;
+      height: 50vh;
+      width: 100%;
+      max-width: 250px;
+      right: -100%;
+      top: 0px;
+      gap: 30px;
+      display: block;
+      text-align: center;
+      background: rgba(0, 0, 255, 0.504);
+      transition: all 0.3s ease;
+    }
+.navbar.show .menu-list{
+      right: 0%;
+    }
+.navbar .menu-list li{
+      margin-top: 45px;
+    }
+.navbar .menu-list li a{
+      font-size: 20px;
+      margin-left: -100%;
+      transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+.navbar.show .menu-list li a{
+      margin-left: 0px;
+}
+/*Table CSS*/
+.info table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.info table thead th {
+    font-weight: bold;
+}
+.info table th,
+.info table td {
+    border: 1px solid gray;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.info table th {
+    background-color: #eee;
+    font-weight: 500;
+}
+
+.info table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+    /*Home page css*/
+.img{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+.image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+}
+.content h1{
+    font-family: "Dongle-bold";
+    font-size: 5rem;
+}
+.content p{
+    font-family: "Dongle-regular";
+    font-size: 2rem;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+.home{
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+}
+.home-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.home-item img{
+    width: 100%;
+    height: 400px;
+}
+.home-item{
+    text-align: left;
+}
+.home-item h3{
+    font-size: 2rem;
+}
+
+.video-container {
+    height: auto;
+    width: 100%;
+  }
+footer{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+}
+footer p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}
+
+/*Blog detail page CSS*/
+.blog {
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+
+}
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.blog-item img{
+    width: 100%;
+    height: 400px;
+   
+}
+.blog-item{
+    text-align: left;
+}
+.blog-item h3{
+    font-size: 2rem;
+}
+.blog-item p{
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: "Dongle-regular";
+    
+}
+
+/*Blog Detail Page CSS*/
+.detail{
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+}
+.detail h2{
+    margin-bottom: 40px;
+}
+.detail-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.detail-item{
+    text-align: left;
+}
+.detail-item h3{
+    font-size: 2rem;
+}
+.detail-item p{
+    font-size: 1.4rem;
+    line-height: 1;
+    font-family: "Dongle-regular";
+}
+  /*gallery page CSS*/
+.gallery{
+    font-size: 2.4rem;
+    font-family: "Dongle-bold";
+    margin: 40px 80px;
+    text-align: center;
+
+}
+/* gallery images*/
+.gallery-grid{
+    display: grid;
+    /* Define the display property as grid for the gallery-grid class */
+    grid-template-columns: repeat(3, 1fr);
+    /* Define the grid template with three columns of equal width */
+    grid-gap: 40px;
+}
+.gallery-item img{
+    width: 100%;
+    height: 400px;
+   
+}
+.gallery-item{
+    text-align: left;
+}
+.gallery-item h3{
+    font-size: 2rem;
+}
+
+  
+/*Contact Page CSS*/
+
+.contact{
+    padding: 80px;
+    text-align: center;
+    background-image: linear-gradient(to right top, #f5fffa, #eafbea, #e9f4d4, #f1eabf, #ffdead);
+}
+.contact h3{
+    /* Style the title of the contact section */
+    font-family: "Dongle-bold";
+    font-size: 3rem;
+}
+.contact-info p{
+    /* Style the paragraph and list elements that contain the contact information */
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.contact-info ul{
+    /* Style the unordered list that contains the contact information */
+    list-style: none; /* Remove the bullet points and align the items in the center */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+} 
+.contact-info li{
+    margin: 0 20px;
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+  
+}
+.contact-info li a{
+    /* Style the links in the list items that contain the contact information */
+    text-decoration: none;
+    font-family: "Dongle-regular";
+    color: black;
+}
+.contact-info i{
+    font-size: 24px;
+    margin-right: 10px;
+}
+.form{
+    width: 100%;
+}
+input,textarea{
+    /* Define a textarea style */
+    width: 70%;
+    padding: 10px;
+    margin: 20px 0;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0, 0.1);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-family: "Dongle-regular";
+    
+}
+textarea{
+    height: 200px;
+}
+/* Style the button within the form */
+.form button{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkviolet;
+    /* Round the corners of the button using a border radius of 1rem */
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    font-family: "Dongle",sans-serif;
+    font-size: 1.6rem;
+    border: none;
+     /* Apply a transition effect to the button, with a transition delay of 0.3s and an easing function of ease */
+    transition: all ease 0.3s ease;
+}
+.form button:hover{
+    background-color:#6a0dad;
+    box-shadow: 0 3px 6px rgba(0,0,0,o.16);
+    transform: translateY(-3px);
+}
+@media all and (max-width: 1177px) {
+    .content h1 {
+        line-height: 0.7;
+    }
+    .content p {
+        margin-top: 0;
+        line-height: 0.8;
+    }
+    .gallery img {
+        height: 250px;
+    }
+    input,
+    textarea {
+        width: 100%;
+    }
+    .cont {
+        padding: 0 60px;
+    }
+  
+
+@media all and (max-width: 850px) {
+    .nav-menu {
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 768px) {
+    .content h1 {
+        margin-bottom: 10px;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    body.disabled {
+        overflow: hidden;
+    }
+    .blog-grid{
+        grid-template-columns: repeat(2, 1fr);   
+    }
+    .icon{
+        display: block
+      }
+}
+
+@media all and (max-width: 600px) {
+    .content h1 {
+        font-size: 2.5rem;
+    }
+    .content p {
+        font-size: 1.5rem;
+    }
+    .logo {
+        display: none;
+    }
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    .content p {
+        font-size: 1.1rem;
+    }
+    .gallery {
+        font-size: 1.5rem;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+.blog-grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+    .home-grid{
+        grid-template-columns: repeat(1, 1fr);
+}
+    .icon{
+        display: block
+      }
+}
+
+@media all and (max-width: 430px) {
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    .content p {
+        font-size: 1.1rem;
+    }
+    .gallery {
+        font-size: 1.5rem;
+    }
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+    .icon{
+        display: block
+      }
+}
